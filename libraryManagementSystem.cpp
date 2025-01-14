@@ -33,7 +33,7 @@ void loadBooks()
     }
     else
     {
-        cout << "Error Loading Book!. Starting fresh.";
+        cout << "Error Loading Database!. Starting fresh.";
     }
     mybook.close();
 }
@@ -94,7 +94,7 @@ void addBook()
             {
                 cout << endl;
             }
-            cout << "\nBook Title Taken!\n";
+            cout << "\nTitle Taken!\n";
             return;
         }
         cout << "Enter Book Author: ";
@@ -118,10 +118,12 @@ void searchBook()
         if (books[i].id == id)
         {
             cout << "Book Found!\n";
+            cout << "\n-------------------------------------------------------------\n";
             cout << "Book ID: " << books[i].id << "\n"
                  << "Book Title: " << books[i].title << "\n"
                  << "Book Author: " << books[i].author << "\n"
                  << "Book Quantity: " << books[i].quantity << "\n";
+            cout << "-------------------------------------------------------------\n";
         }
     }
 }
@@ -157,7 +159,7 @@ void saveBooks()
     }
     else
     {
-        cout << "Error opening book!";
+        cout << "Error Saving Database!";
     }
     mybook.close();
 }
@@ -167,9 +169,9 @@ void menu()
     int choice;
     do
     {
-        cout << "\n1.Add Book\n";
-        cout << "2.Search Book\n";
-        cout << "3.Display Books\n";
+        cout << "\n1. Add a new book to the inventory\n";
+        cout << "2. Search for a book by Book ID \n";
+        cout << "3. Display all available books\n";
         cout << "4.Exit\n";
         cout << endl;
         cout << "Enter you choice: ";
@@ -180,13 +182,13 @@ void menu()
             addBook();
             break;
         case 2:
-            cout << "Searching....";
+            searchBook();
             break;
         case 3:
             displayBooks();
             break;
         case 4:
-            cout << "Ending...";
+            cout << "Closing...";
             break;
 
         default:

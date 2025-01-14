@@ -147,7 +147,7 @@ void savePatients()
     }
     else
     {
-        cout << "Error Opening Database!";
+        cout << "Error Saving Database!";
     }
     mypatient.close();
 }
