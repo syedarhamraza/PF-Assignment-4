@@ -50,7 +50,7 @@ bool isBookIdUnique(int userBookId)
     return true;
 }
 
-bool isBookTitleUnique(string &userBookTitle)
+bool isBookTitleUnique(const string &userBookTitle)
 {
     for (int i = 0; i < bookCount; i++)
     {
